@@ -1,0 +1,11 @@
+package spring.di.ui;
+
+public class GridExampleConsole implements ExamConsole {
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
