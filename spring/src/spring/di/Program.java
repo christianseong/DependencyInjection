@@ -1,10 +1,9 @@
 package spring.di;
 
-import spring.di.entity.Exam;
-import spring.di.entity.NewlecExam;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import spring.di.ui.ExamConsole;
-import spring.di.ui.GridExampleConsole;
-import spring.di.ui.InlineExamConsole;
 
 public class Program {
 
@@ -17,6 +16,17 @@ public class Program {
 		*/
 		
 		
+		/*
+		 ApplicationContext 종류
+		 ClassPathXmlApplicationContext => class에서 지정
+		 FileSystemXmlApplicationContext => C드리아브나 D 드라이브 파일시스템
+		 XmlWebApplicationContext => Web에서 지정 
+		 AnnotationConfigApplicationContext => Annotation 사용해서 지정한다
+		 */
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring/di/setting.xml");
+		//ExamConsole console = (ExamConsole)context.getBean("console");
+		ExamConsole console= context.getBean(ExamConsole.class);
 		console.print();
 		
 	}
