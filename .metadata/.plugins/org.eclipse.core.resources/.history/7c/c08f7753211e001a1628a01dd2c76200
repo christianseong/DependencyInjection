@@ -6,9 +6,7 @@ public class GridExampleConsole implements ExamConsole {
 
 	private Exam exam;
 	
-	public GridExampleConsole() {
-		// TODO Auto-generated constructor stub
-	}
+	
 	public GridExampleConsole(Exam exam) {
 		this.exam = exam;
 	}

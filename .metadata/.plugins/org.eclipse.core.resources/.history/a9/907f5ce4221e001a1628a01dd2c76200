@@ -9,16 +9,11 @@ import spring.di.ui.InlineExamConsole;
 public class Program {
 
 	public static void main(String[] args) {
-		
-		/* 스프링에게 지시하는 방법으로 코드를 변경
+		// TODO Auto-generated method stub
 		Exam exam = new NewlecExam();
-		ExamConsole console = new GridExampleConsole();
-		console.setExam(exam);
-		*/
-		
-		
+		//ExamConsole console = new InlineExamConsole(exam);
+		ExamConsole console = new GridExampleConsole(exam);
 		console.print();
-		
 	}
 
 }
